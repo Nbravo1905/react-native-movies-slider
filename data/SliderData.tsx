@@ -1,6 +1,6 @@
 import { ImageSourcePropType } from 'react-native';
 
-export type ImageSlider = {
+export type ImageSliderType = {
   title: string;
   image: ImageSourcePropType;
   description: string;
@@ -25,7 +25,7 @@ export const ImagesSliders = [
   },
   {
     title: 'De Noche Con El Diablo',
-    image: require('@/assets/images/movies/img4.jpg'),
+    image: require('@/assets/images/movies/img4.png'),
     description: 'Qui pariatur adipisicing sunt aute consequat est non excepteur.'
   }
 ];

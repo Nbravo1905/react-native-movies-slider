@@ -18,7 +18,7 @@ Es una app que permite navegar y explorar películas a través de un carrusel in
 
 ## Vistas Previas
 
-<table>
+<table width="100%">
   <tr>
     <td><img src="./assets/images/previews/Screenshot_1.png" alt="Captura 1" width="300"/></td>
     <td><img src="./assets/images/previews/Screenshot_2.png" alt="Captura 2" width="300"/></td>

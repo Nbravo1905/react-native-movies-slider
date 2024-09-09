@@ -18,16 +18,11 @@ Es una app que permite navegar y explorar películas a través de un carrusel in
 
 ## Vistas Previas
 
-<div align="center">
-  <table style="width:100%">
-    <tr>
-      <td style="width:50%"><img src="./assets/images/previews/Screenshot_1.png" alt="Captura 1" style="width:100%"/></td>
-      <td style="width:50%"><img src="./assets/images/previews/Screenshot_2.png" alt="Captura 2" style="width:100%"/></td>
-    </tr>
-    <tr>
-      <td style="width:50%"><img src="./assets/images/previews/Screenshot_3.png" alt="Captura 3" style="width:100%"/></td>
-      <td style="width:50%"><a href="./assets/images/previews/video_1.mp4">Ver el video demo</a></td>
-    </tr>
-  </table>
-</div>
+| Captura 1 | Captura 2 |
+|-----------|-----------|
+| ![](./assets/images/previews/Screenshot_1.png) | ![](./assets/images/previews/Screenshot_2.png) |
+
+| Captura 3 | Vista Previa del Video |
+|-----------|------------------------|
+| ![](./assets/images/previews/Screenshot_3.png) | [Ver el video demo](./assets/images/previews/video_1.mp4) |
 

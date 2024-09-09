@@ -34,7 +34,7 @@ const Pagination = ({items, paginationIndex, scrollX}: Props) => {
             key={index} 
             style={[
               styles.dot,
-              pgAnimationStyle,
+              // pgAnimationStyle,
               { backgroundColor: paginationIndex === index ? '#222' : '#aaa'}
             ]} 
           />

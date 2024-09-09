@@ -14,6 +14,7 @@ const Slider = ({ moviesSlider }: Props) => {
 
   const scrollX = useSharedValue(0);
   const [paginationIndex, setPaginationIndex] = useState(0);
+  const [data, setData] = useState(moviesSlider);
 
   const onScrollHandler = useAnimatedScrollHandler({
     onScroll: (e) => {
@@ -23,7 +24,7 @@ const Slider = ({ moviesSlider }: Props) => {
 
   const onViewableItemsChanged = ({ viewableItems } : {viewableItems: ViewToken[] }) => {
     if (viewableItems[0].index !== undefined && viewableItems[0].index !== null) {
-      setPaginationIndex(viewableItems[0].index);
+      setPaginationIndex(viewableItems[0].index % moviesSlider.length);
     }
   }
   const viewabilityConfig = {
@@ -37,14 +38,17 @@ const Slider = ({ moviesSlider }: Props) => {
   return (
     <View>
       <Animated.FlatList
-        data={moviesSlider}
+        data={data}
         renderItem={({ item, index }) => <SliderItem item={item} index={index} scrollX={scrollX} />}
         horizontal
         showsHorizontalScrollIndicator={false}
         pagingEnabled
         onScroll={onScrollHandler}
+        scrollEventThrottle={16}
         removeClippedSubviews={false}
         viewabilityConfigCallbackPairs={viewabilityConfigCallbackPairs.current}
+        onEndReached={() => setData([...data, ...moviesSlider])}
+        onEndReachedThreshold={0.5}
       />
       <Pagination items={moviesSlider} paginationIndex={paginationIndex} scrollX={scrollX} />
     </View>
